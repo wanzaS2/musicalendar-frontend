@@ -5,16 +5,16 @@ import Button from "./Button";
 
 export const Main = () => {
     const navigate = useNavigate();
-    const goCalender = () => {
-        navigate('/calender');
+    const goCalendar = () => {
+        navigate('/calendar');
     }
     return(
         <header className="App-header">
             <img src={logo} className="App-logo" alt="logo"/>
             <p>
-                Musicalender Project Start!
+                Musicalendar Project Start!
             </p>
-            <Button onClick={goCalender}>Go!</Button>
+            <Button onClick={goCalendar}>Go!</Button>
         </header>
     )
 }
