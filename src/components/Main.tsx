@@ -8,6 +8,9 @@ export const Main = () => {
     const goCalendar = () => {
         navigate('/calendar');
     }
+    const goMyCalendar = () => {
+        navigate('/mycalendar')
+    }
     return(
         <header className="App-header">
             <img src={logo} className="App-logo" alt="logo"/>
@@ -15,6 +18,7 @@ export const Main = () => {
                 Musicalendar Project Start!
             </p>
             <Button onClick={goCalendar}>Go!</Button>
+            <Button onClick={goMyCalendar}>MyCalenderGo!</Button>
         </header>
     )
 }
