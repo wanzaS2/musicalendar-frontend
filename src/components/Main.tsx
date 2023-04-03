@@ -17,6 +17,9 @@ export const Main = () => {
 	const goCalendar = () => {
 		navigate('/calendar');
 	}
+  const goMyCalendar = () => {
+        navigate('/mycalendar')
+    }
 	return (
 		<><Navbar />
 		<header>
@@ -28,6 +31,7 @@ export const Main = () => {
 			</p>
 			
 			<Button onClick={goCalendar}>Go!</Button>
+      <Button onClick={goMyCalendar}>MyCalenderGo!</Button>
 			</div>
 		</header>
 		</>
