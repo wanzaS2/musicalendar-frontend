@@ -1,9 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Button from "./components/Button";
 import Calendar from "./components/Calendar";
 import {Main} from "./components/Main";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import MyCalendar from "./components/MyCalendar";
 import SignIn from "./components/SignIn";
 import {BrowserRouter, Routes, Route, useNavigate} from "react-router-dom";
