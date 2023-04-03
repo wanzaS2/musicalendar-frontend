@@ -5,9 +5,17 @@ interface ButtonProps{
     children: string;
     onClick: () => void;
 }
-
+const btnStyle = {
+	color: "white",
+	background: "teal",
+	padding: ".375rem .75rem",
+	border: "1px solid teal",
+	borderRadius: ".25rem",
+	fontSize: "1rem",
+	lineHeight: 1.5,
+ };
 const Button = ({children, onClick} : ButtonProps) => {
-    return <button onClick={onClick}>{children}</button>;
+    return <button style={btnStyle} onClick={onClick} >{children}</button>;
 }
 export default Button;
 
