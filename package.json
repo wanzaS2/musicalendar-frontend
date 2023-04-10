@@ -56,6 +56,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://Musicalender-docker.ap-northeast-2.elasticbeanstalk.com/",
+  "homepage": "http://Musicalender-docker.ap-northeast-2.elasticbeanstalk.com/",
   "eslintConfig": {
     "extends": [
       "react-app",
