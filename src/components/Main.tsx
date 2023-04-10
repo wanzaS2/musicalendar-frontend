@@ -10,6 +10,18 @@ import Navbar from "../layout/Layout";
 import { NavBar } from "../layout/Navbar";
 
 export const Main = () => {
+	const [message, setMessage] = useState([]);
+
+	useEffect(() => {
+		fetch("api/hello")
+			.then((response) => {
+				return response.json();
+			})
+			.then((data) => {
+				setMessage(data);
+			})
+	}, []);
+
 	const navigate = useNavigate();
 	const goCalendar = () => {
 		navigate('/calendar');
@@ -17,18 +29,6 @@ export const Main = () => {
   	const goMyCalendar = () => {
         navigate('/mycalendar')
     }
-
-	const [message, setMessage] = useState([]);
-
-	useEffect(() => {
-		fetch("/hello")
-			.then((response) => {
-				return response.json();
-			})
-			.then(function (data){
-				setMessage(data);
-			})
-	}, []);
 
 	return (
 		<><Navbar />
@@ -38,7 +38,7 @@ export const Main = () => {
 			<div className="btn">
 			<p>
 				Musicalendar Project Start!
-				{message.map((text, index) => <li key={`${index}-${text}`}>{text}</li>)}
+				{message}
 			</p>
 			<Button onClick={goCalendar}>Go!</Button>
       		<Button onClick={goMyCalendar}>MyCalenderGo!</Button>
