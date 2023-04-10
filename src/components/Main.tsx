@@ -38,10 +38,8 @@ export const Main = () => {
 			<div className="btn">
 			<p>
 				Musicalendar Project Start!
-			</p>
-			<ul>
 				{message.map((text, index) => <li key={`${index}-${text}`}>{text}</li>)}
-			</ul>
+			</p>
 			<Button onClick={goCalendar}>Go!</Button>
       		<Button onClick={goMyCalendar}>MyCalenderGo!</Button>
 			</div>
