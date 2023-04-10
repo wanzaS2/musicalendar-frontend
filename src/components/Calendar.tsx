@@ -2,30 +2,21 @@ import React from 'react'
 import {useNavigate} from "react-router-dom";
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
-import "./Calendar.css"
+import "../layout/Calendar.css"
+import Navbar from "../layout/Layout";
 
 function Calendar() {
 
-    const navigate = useNavigate();
-
     return(
-            <FullCalendar
-                initialView={'dayGridMonth'}
-                plugins={[dayGridPlugin]}
-                customButtons={{
-                    myCustomButton: {
-                        text: '로그인',
-                        click: function (){
-                            navigate('/signIn');
-                        }
-                    },
-                }}
-                headerToolbar={{
-                    start: 'prev next today',
-                    center: 'title',
-                    end: 'myCustomButton',
-                }}
-            />
+        <><Navbar/><FullCalendar
+            initialView={'dayGridMonth'}
+            plugins={[dayGridPlugin]}
+            titleFormat={{ year: 'numeric', month: 'short' }}
+            headerToolbar={{
+                start: '',
+                center: 'title',
+                end: 'prev next today',
+            }}/></>
         )
 }
 

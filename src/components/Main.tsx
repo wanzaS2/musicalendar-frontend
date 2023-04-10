@@ -9,9 +9,6 @@ import ImagePicker from "./Slick";
 import Navbar from "../layout/Layout";
 import { NavBar } from "../layout/Navbar";
 
-
-
-
 export const Main = () => {
 	const navigate = useNavigate();
 	const goCalendar = () => {
@@ -31,7 +28,7 @@ export const Main = () => {
 			</p>
 			
 			<Button onClick={goCalendar}>Go!</Button>
-      <Button onClick={goMyCalendar}>MyCalenderGo!</Button>
+      		<Button onClick={goMyCalendar}>MyCalenderGo!</Button>
 			</div>
 		</header>
 		</>
