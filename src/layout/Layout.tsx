@@ -1,7 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../App.css";
 import { NavLink } from "react-router-dom";
+
 function Navbar(){
+	const navigate = useNavigate();
+	const goLogin = () => {
+		navigate('/login')
+	}
 	return(
 		<div className="Navbar">
 			<div className="black-nav">
@@ -18,7 +23,7 @@ function Navbar(){
 				  
          
 				<h4 className="item">메뉴1</h4>
-				<h4 className="login">로그인/회원가입</h4>
+				<h4 className="login" onClick={goLogin} style={{cursor:'pointer'}}>로그인/회원가입</h4>
 			
 
 			</div>

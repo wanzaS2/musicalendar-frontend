@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -22,6 +23,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
 .App-link {
@@ -45,17 +47,21 @@
 	padding: 10px;
 	text-align: center;
 	align-items: center;
+	
 }
 .title{
-	margin-left: 20px;
+	/* margin-left: 20px; */
+	margin: auto;
 }
 
 .item{
-	margin-left: 100px;
+	/* margin-left: 100px; */
+	margin: auto;
 }
 
 .login{
-	margin-left: 1100px;
+	/* margin-left: 1100px; */
+	margin: auto;
 }
 
 .btn{

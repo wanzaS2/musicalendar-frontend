@@ -7,7 +7,7 @@ import { images } from '../data/Image';
 const Container = styled.div`
   width: 800px;
   height: 500px;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -51,6 +51,7 @@ const Picker = styled.div<{ background: string }>`
   background-color: ${(props) => props.background};
   margin: 0 6px;
   cursor: pointer;
+  
 `;
 
 const ImagePicker = (): JSX.Element => {

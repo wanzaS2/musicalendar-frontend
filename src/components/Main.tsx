@@ -7,7 +7,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ImagePicker from "./Slick";
 import Navbar from "../layout/Layout";
-import { NavBar } from "../layout/Navbar";
 
 
 
@@ -17,9 +16,10 @@ export const Main = () => {
 	const goCalendar = () => {
 		navigate('/calendar');
 	}
-  const goMyCalendar = () => {
+   const goMyCalendar = () => {
         navigate('/mycalendar')
     }
+
 	return (
 		<><Navbar />
 		<header>
@@ -31,7 +31,8 @@ export const Main = () => {
 			</p>
 			
 			<Button onClick={goCalendar}>Go!</Button>
-      <Button onClick={goMyCalendar}>MyCalenderGo!</Button>
+      	<Button onClick={goMyCalendar}>MyCalenderGo!</Button>
+			
 			</div>
 		</header>
 		</>
