@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {Component, useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../logo.svg";
 import Button from "./Button";
@@ -14,9 +14,22 @@ export const Main = () => {
 	const goCalendar = () => {
 		navigate('/calendar');
 	}
-  const goMyCalendar = () => {
+  	const goMyCalendar = () => {
         navigate('/mycalendar')
     }
+
+	const [message, setMessage] = useState([]);
+
+	useEffect(() => {
+		fetch("/hello")
+			.then((response) => {
+				return response.json();
+			})
+			.then(function (data){
+				setMessage(data);
+			})
+	}, []);
+
 	return (
 		<><Navbar />
 		<header>
@@ -26,7 +39,9 @@ export const Main = () => {
 			<p>
 				Musicalendar Project Start!
 			</p>
-			
+			<ul>
+				{message.map((text, index) => <li key={`${index}-${text}`}>{text}</li>)}
+			</ul>
 			<Button onClick={goCalendar}>Go!</Button>
       		<Button onClick={goMyCalendar}>MyCalenderGo!</Button>
 			</div>
