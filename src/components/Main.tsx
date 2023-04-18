@@ -1,13 +1,13 @@
 import React, {Component, useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../logo.svg";
+
 import Button from "./Button";
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ImagePicker from "./Slick";
-import Navbar from "../layout/Layout";
-import { NavBar } from "../layout/Navbar";
+import Navbar from "../layout/Navbar";
+
 
 export const Main = () => {
 	const [message, setMessage] = useState([]);
@@ -31,11 +31,14 @@ export const Main = () => {
     }
 
 	return (
-		<><Navbar />
-		<header>
+		<>
+		<header ><Navbar /></header>
+		<body>
 			<ImagePicker/>
 			{/* <img src={logo} className="App-logo" alt="logo" /> */}
+			
 			<div className="btn">
+			
 			<p>
 				Musicalendar Project Start!
 				{message}
@@ -43,7 +46,7 @@ export const Main = () => {
 			<Button onClick={goCalendar}>Go!</Button>
       		<Button onClick={goMyCalendar}>MyCalenderGo!</Button>
 			</div>
-		</header>
+		</body>
 		</>
 	)
 }
