@@ -1,16 +1,18 @@
 import React, {useState,useEffect} from 'react';
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
-import "./Calendar.css"
+import "../layout/Calendar.css"
 import styled from "styled-components";
 import { Fab } from '@mui/material'; // Floating Action Button
 import AddIcon from '@mui/icons-material/Add';
+import {useNavigate} from "react-router-dom";
 
 function MyCalendar(){
-
+    const navigate = useNavigate();
     const [btn, setBtn] = useState(true);
     const btnEvent = () => {
         setBtn(!btn);
+        navigate('/mycalendar/addForm')
     };
 	 const [message, setMessage] = useState([]);
 	 useEffect(() => {
@@ -29,10 +31,11 @@ function MyCalendar(){
             <FullCalendar
             initialView={'dayGridMonth'}
             plugins={[dayGridPlugin]}
+            titleFormat={{ year: 'numeric', month: 'short' }}
             headerToolbar={{
-                start: 'prev next today',
+                start: '',
                 center: 'title',
-                end: '',
+                end: 'prev next today',
             }}/>
             <PositionBtn>
                 <Fab
