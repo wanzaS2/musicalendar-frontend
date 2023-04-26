@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import "../layout/Calendar.css"
-import Navbar from "../layout/Layout";
+import Navbar from "../layout/Navbar";
 
 function Calendar() {
 

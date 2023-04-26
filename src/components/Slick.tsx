@@ -4,10 +4,23 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import { images } from '../data/Image';
 
 
+// const Container = styled.div`
+//   width: 800px;
+//   height: 500px;
+//   position: absolute;
+
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// `;
 const Container = styled.div`
-  width: 800px;
-  height: 500px;
+//   width: 800px;
+//   height: 500px;
   position: absolute;
+  min-height: calc(100vh - 300px);
+  min-width: calc(100vh - 80px);
+// height: calc(100vh - 300px);
+//   width: calc(100vh - 80px);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
