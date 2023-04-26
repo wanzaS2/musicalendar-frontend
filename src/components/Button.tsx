@@ -14,7 +14,6 @@ const btnStyle = {
 	fontSize: "1rem",
 	lineHeight: 1.5,
 	cursor: "pointer",
-
  };
 const Button = ({children, onClick} : ButtonProps) => {
     return <button style={btnStyle} onClick={onClick} >{children}</button>;

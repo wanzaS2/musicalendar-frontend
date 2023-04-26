@@ -64,6 +64,7 @@ const Picker = styled.div<{ background: string }>`
   background-color: ${(props) => props.background};
   margin: 0 6px;
   cursor: pointer;
+  
 `;
 
 const ImagePicker = (): JSX.Element => {
