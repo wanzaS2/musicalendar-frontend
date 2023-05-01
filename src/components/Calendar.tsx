@@ -1,19 +1,23 @@
-import React, {Component} from 'react'
+import React from 'react'
+import {useNavigate} from "react-router-dom";
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
+import "../layout/Calendar.css"
+import Navbar from "../layout/Navbar";
 
-class Calendar extends Component {
-    constructor(props: {} | Readonly<{}>) {
-        super(props);
-    }
+function Calendar() {
 
-    render() {
-        return(
-            <FullCalendar
-                initialView={'dayGridMonth'}
-                plugins={[dayGridPlugin]}/>
+    return(
+        <><Navbar/><FullCalendar
+            initialView={'dayGridMonth'}
+            plugins={[dayGridPlugin]}
+            titleFormat={{ year: 'numeric', month: 'short' }}
+            headerToolbar={{
+                start: '',
+                center: 'title',
+                end: 'prev next today',
+            }}/></>
         )
-    }
 }
 
 export default Calendar;
