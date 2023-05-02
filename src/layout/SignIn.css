@@ -1,5 +1,5 @@
 .kakao_btn{
-    background-image: url("/src/images/kakao_login_medium_wide.png");
+    background-image: url("/src/images/kakao.png");
     background-repeat: no-repeat;
     background-size : cover;
     margin: 10px auto;
@@ -7,4 +7,17 @@
     color: transparent;
     width: 300px;
     height: 45px;
+	 
+}
+
+.login_loc{
+	position: fixed;
+	background-color: rgb(220, 219, 219);
+    top: 50%;
+    left: 50%;
+	 width: 250px;
+	 height: 300px;
+    transform: translate(-50%, -50%);
+	 text-align: center;
+	 border-radius: 10px;
 }
