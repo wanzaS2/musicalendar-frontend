@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import "../layout/Calendar.css"
@@ -14,6 +14,17 @@ function MyCalendar(){
         setBtn(!btn);
         navigate('/mycalendar/addForm')
     };
+	 const [message, setMessage] = useState([]);
+	 useEffect(() => {
+		fetch("/hello")
+			 .then((response) => {
+				  return response.json();
+			 })
+			 .then(function (data) {
+				  console.log(message)
+				  setMessage(data);
+			 });
+  }, []);
 
     return(
         <>

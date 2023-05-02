@@ -9,9 +9,9 @@ import MyCalendar from "./components/MyCalendar";
 import SignIn from "./components/SignIn";
 import AddForm from "./components/AddForm";
 import {BrowserRouter, Routes, Route, useNavigate} from "react-router-dom";
+import { log } from 'console';
 
 function App() {
-
   return (
       <BrowserRouter>
             <Routes>
