@@ -1,24 +1,43 @@
-import react from 'react';
+import react, {useState} from 'react';
 import styled from 'styled-components';
-import { Button } from '@mui/material';
+import {Button} from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import TextField from '@material-ui/core/TextField';
 
 import {useNavigate} from "react-router-dom";
+import SiteSelectBox from "./SiteSelectBox";
+import axios from "axios";
 
-function AddForm(){
+function AddForm() {
     const navigate = useNavigate();
+    // const [date, setDate] = useState();
+    // const [title, setTitle] = useState();
+    // const [site, setSite] = useState();
 
-    return(
+    // try {
+    //     const r = await axios.post("/calendar",
+    //         {
+    //             date,
+    //             title,
+    //             site,
+    //         })
+    //     console.log(r.data);
+    // }
+    // catch (error) {
+    //     console.log('error');
+    // }
+    // @ts-ignore
+    // @ts-ignore
+    return (
         <>
             <Container>
                 <Modal>
                     <h1>
-                        <EditIcon /> &nbsp;일정 추가하기
+                        <EditIcon/> &nbsp;일정 추가하기
                     </h1>
-                    <hr />
+                    <hr/>
                     <TextField
-                        style={{ marginBottom: '3rem' }}
+                        style={{marginBottom: '3rem'}}
                         label='날짜를 추가해주세요'
                         type='datetime-local'
                         defaultValue='0000-00-00T00:00'
@@ -40,10 +59,12 @@ function AddForm(){
                         // ref={plan}
                     />
 
+                    <SiteSelectBox/>
+
                     <BtnGroup>
                         <Button
                             variant='contained'
-                            style={{ marginRight: '50px' }}
+                            style={{marginRight: '50px'}}
                             onClick={() => {
                                 // props.history.goBack();
                                 navigate('/mycalendar')
@@ -54,7 +75,7 @@ function AddForm(){
                         <Button
                             variant='contained'
                             color='primary'
-                            style={{ marginTop: '5px' }}
+                            style={{marginTop: '5px'}}
                             // onClick={addContent}
                         >
                             일정 추가
