@@ -6,7 +6,7 @@ import Button from "./Button";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ImagePicker from "./Slick";
-import Navbar from "../layout/Layout";
+import Navbar from "../layout/Navbar";
 
 export const Main = () => {
 	const [message, setMessage] = useState([]);
