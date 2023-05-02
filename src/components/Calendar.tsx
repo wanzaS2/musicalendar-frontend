@@ -3,13 +3,12 @@ import {useNavigate} from "react-router-dom";
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import "../layout/Calendar.css"
-import Navbar from "../layout/Layout";
+import Navbar from "../layout/Navbar";
 import axios from "axios";
 import {red} from "@mui/material/colors";
 import {Fab} from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import styled from "styled-components";
-import Navbar from "../layout/Navbar";
 
 function Calendar() {
     const navigate = useNavigate();
